@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>차곡차곡 AI 실전기 · 온라인 무료 설명회</title>
+<meta name="description" content="고객경험 개선을 위한 6주 AI 실전 과정 '차곡차곡 AI 실전기' 온라인 무료 설명회 — 7월 28일(화) 오후 8시, Zoom, 약 60분." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="차곡차곡 AI 실전기 · 온라인 무료 설명회" />
+<meta property="og:description" content="AI, 이제 '아는 것'을 넘어 '내 사업에 써먹는 것'으로. 7월 28일(화) 오후 8시 · Zoom · 무료" />
+<meta property="og:type" content="website" />
+
+<!-- Pretendard -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<!-- Fraunces (serif accent for display) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   CONFIG NOTE (한국어)
+   폼 제출은 Web3Forms로 yhur0216@gmail.com 에 전송됩니다.
+   페이지 하단 <script> 안의 WEB3FORMS_ACCESS_KEY 값을 반드시
+   본인 키로 교체하세요. (발급: https://web3forms.com — 이메일에
+   yhur0216@gmail.com 입력 후 무료 access key 발급)
+   ============================================================ */
+
+:root{
+  --bg:        #14110d;
+  --bg-2:      #1a1610;
+  --card:      #201b14;
+  --card-2:    #262019;
+  --border:    rgba(237,232,224,.10);
+  --border-2:  rgba(237,232,224,.16);
+  --orange:    #d97757;
+  --orange-br: #e88e6e;
+  --orange-dk: #c15f3f;
+  --orange-soft: rgba(217,119,87,.13);
+  --text:      #f5f1ea;
+  --text-dim:  #d3ccc0;
+  --text-mut:  #9a9388;
+  --green:     #7cc4a3;
+  --radius:    18px;
+  --maxw:      940px;
+  --serif: "Fraunces", "Pretendard Variable", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 500px at 78% -8%, rgba(217,119,87,.18), transparent 60%),
+    radial-gradient(760px 520px at 8% 4%, rgba(217,119,87,.07), transparent 55%),
+    var(--bg);
+}
+body::after{
+  content:"";
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.028) 1px, transparent 1px);
+  background-size:3px 3px;
+  opacity:.5;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- eyebrow / chips ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:13px;font-weight:600;letter-spacing:.04em;
+  color:var(--orange-br);
+  padding:7px 15px;border-radius:100px;
+  background:var(--orange-soft);
+  border:1px solid rgba(217,119,87,.28);
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(217,119,87,.22)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:104px 0 66px;text-align:center}
+.hero .series{
+  font-family:var(--serif);font-style:italic;
+  color:var(--text-dim);font-size:16px;letter-spacing:.02em;
+  margin:22px 0 20px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(40px,8.6vw,92px);
+  line-height:1;
+  letter-spacing:-.01em;
+  color:var(--text);
+  margin:0 0 6px;
+  word-break:keep-all;
+}
+.hero h1 .accent{color:var(--orange)}
+.hero .kr-title{
+  font-family:var(--sans);
+  font-weight:800;
+  font-size:clamp(23px,4.9vw,44px);
+  letter-spacing:-.02em;
+  line-height:1.08;
+  margin-top:10px;
+  word-break:keep-all;
+}
+.hero .kr-title b{color:var(--orange)}
+.hero .subtitle{
+  margin:26px auto 0;max-width:680px;
+  font-size:clamp(19px,2.6vw,24px);
+  color:var(--text);font-weight:700;
+}
+.hero .tagline{
+  margin:15px auto 0;max-width:660px;
+  color:var(--text-dim);font-size:clamp(16px,2.1vw,19px);font-weight:500;
+}
+.hero .invite{
+  margin:22px auto 0;max-width:620px;
+  color:var(--text-mut);font-size:15.5px;font-weight:500;
+}
+.hero-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--sans);font-weight:700;font-size:16.5px;
+  padding:16px 30px;border-radius:14px;cursor:pointer;border:none;
+  transition:transform .18s ease, box-shadow .25s ease, background .2s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  color:#1a120c;
+  background:linear-gradient(180deg,var(--orange-br),var(--orange));
+  box-shadow:0 10px 28px -8px rgba(217,119,87,.6), inset 0 1px 0 rgba(255,255,255,.28);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(217,119,87,.7), inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{
+  color:var(--text);background:transparent;
+  border:1px solid var(--border-2);
+}
+.btn-ghost:hover{background:var(--card);border-color:var(--orange)}
+.btn .arrow{transition:transform .2s ease}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* ---------- info bar ---------- */
+.infobar{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin:8px auto 0;
+}
+.info-card{
+  background:linear-gradient(180deg,var(--card),var(--bg-2));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:22px 16px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.info-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange-br))}
+.info-card .label{font-size:13.5px;color:var(--orange-br);font-weight:800;letter-spacing:.06em;margin-bottom:9px}
+.info-card .value{font-size:clamp(18px,2.4vw,22px);font-weight:800;letter-spacing:-.01em}
+.info-card .sub{font-size:13.5px;color:var(--text-dim);font-weight:500;margin-top:4px}
+
+/* ---------- section shell ---------- */
+section.block{padding:64px 0}
+.sec-head{margin-bottom:34px}
+.sec-head .kicker{
+  font-family:var(--serif);font-style:italic;color:var(--orange-br);
+  font-size:17px;margin-bottom:12px;
+}
+.sec-head h2{
+  font-family:var(--sans);font-weight:800;
+  font-size:clamp(26px,4.4vw,38px);letter-spacing:-.02em;line-height:1.15;
+}
+.sec-head p.lead{color:var(--text-dim);margin-top:13px;font-size:17.5px;font-weight:500;max-width:660px}
+
+/* ---------- audience grid ---------- */
+.aud-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.aud-item{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:18px 18px;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.aud-item:hover{transform:translateY(-3px);border-color:rgba(124,196,163,.4);background:var(--card-2)}
+.aud-item .check{
+  flex:none;width:26px;height:26px;border-radius:8px;
+  display:grid;place-items:center;margin-top:1px;
+  background:rgba(124,196,163,.14);color:var(--green);font-weight:800;font-size:14px;
+}
+.aud-item p{font-size:16.5px;font-weight:600;color:var(--text)}
+.aud-item p .hl{color:var(--orange-br);font-weight:800}
+
+/* ---------- journey ribbon ---------- */
+.journey{
+  margin-top:26px;display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:10px;
+  padding:20px;border:1px dashed var(--border-2);border-radius:14px;
+  background:rgba(217,119,87,.04);
+}
+.journey .step{font-weight:800;font-size:clamp(14px,2vw,17px);color:var(--text)}
+.journey .arr{color:var(--orange);font-weight:800}
+.journey .cap{width:100%;text-align:center;color:var(--text-mut);font-size:13px;margin-top:6px}
+
+/* ---------- agenda ---------- */
+.agenda{display:flex;flex-direction:column;gap:12px}
+.agenda-item{
+  display:flex;gap:18px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:20px 22px;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.agenda-item:hover{transform:translateX(4px);border-color:rgba(217,119,87,.45)}
+.agenda-item .num{
+  flex:none;width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  font-family:var(--serif);font-weight:600;font-size:22px;
+  color:var(--orange);background:var(--orange-soft);border:1px solid rgba(217,119,87,.3);
+}
+.agenda-item .body h3{font-size:18.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.agenda-item .body p{font-size:15.5px;font-weight:500;color:var(--text-dim)}
+
+/* ---------- difference ---------- */
+.diff{
+  border:1px solid rgba(217,119,87,.3);
+  border-left:5px solid var(--orange);
+  border-radius:var(--radius);
+  padding:38px clamp(24px,5vw,48px);
+  background:linear-gradient(180deg,rgba(217,119,87,.09),rgba(217,119,87,.02));
+}
+.diff .tag{font-family:var(--serif);font-style:italic;color:var(--orange-br);font-size:17px;margin-bottom:14px}
+.diff p.big{font-size:clamp(19px,3vw,26px);font-weight:700;line-height:1.5;letter-spacing:-.01em}
+.diff p.big .u{color:var(--orange);border-bottom:2px solid rgba(217,119,87,.45)}
+.diff .punch{
+  margin-top:20px;display:inline-block;
+  font-size:clamp(16px,2.4vw,20px);font-weight:800;color:var(--text);
+  padding:12px 20px;border-radius:12px;background:var(--card-2);border:1px solid var(--border);
+}
+.diff .punch b{color:var(--orange)}
+
+/* ---------- CTA + FORM ---------- */
+.cta-section{padding:70px 0 40px}
+.cta-card{
+  background:
+    radial-gradient(700px 300px at 50% -20%, rgba(217,119,87,.22), transparent 65%),
+    linear-gradient(180deg,var(--card),var(--bg-2));
+  border:1px solid var(--border-2);
+  border-radius:26px;
+  padding:clamp(30px,5vw,56px);
+  box-shadow:0 40px 90px -50px rgba(0,0,0,.9);
+}
+.cta-card .head{text-align:center;margin-bottom:34px}
+.cta-card .head .eyebrow{margin-bottom:16px}
+.cta-card .head h2{font-family:var(--sans);font-weight:800;font-size:clamp(30px,5.5vw,46px);letter-spacing:-.02em}
+.cta-card .head h2 .accent{color:var(--orange)}
+.cta-card .head p{color:var(--text-dim);margin-top:12px;font-size:17px;font-weight:500}
+
+form#apply{display:grid;grid-template-columns:1fr 1fr;gap:16px 16px;margin-top:6px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:.01em}
+.field label .req{color:var(--orange);margin-left:3px}
+.field input,.field select,.field textarea{
+  font-family:var(--sans);font-size:16.5px;color:var(--text);
+  background:var(--bg);border:1px solid var(--border-2);border-radius:12px;
+  padding:14px 15px;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+  width:100%;
+}
+.field textarea{resize:vertical;min-height:96px}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23a8a096' d='M6 8 0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:38px;cursor:pointer}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-mut)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--orange);background:var(--bg-2);
+  box-shadow:0 0 0 3px rgba(217,119,87,.18);
+}
+.field input:invalid:not(:placeholder-shown){border-color:rgba(224,110,90,.6)}
+
+.consent{grid-column:1/-1;display:flex;align-items:flex-start;gap:11px;margin-top:2px}
+.consent input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--orange);cursor:pointer}
+.consent label{font-size:14.5px;color:var(--text-dim);font-weight:500;line-height:1.5}
+.consent a{color:var(--orange-br);text-decoration:underline;text-underline-offset:2px}
+
+/* honeypot */
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+
+.submit-row{grid-column:1/-1;margin-top:8px}
+button#submitBtn{width:100%;font-size:18px;padding:18px}
+button#submitBtn:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.form-note{grid-column:1/-1;text-align:center;color:var(--text-mut);font-size:12.5px;margin-top:2px}
+
+/* form status */
+.form-status{grid-column:1/-1;border-radius:12px;padding:14px 16px;font-size:14.5px;font-weight:600;display:none}
+.form-status.show{display:block}
+.form-status.ok{background:rgba(124,196,163,.13);border:1px solid rgba(124,196,163,.4);color:var(--green)}
+.form-status.err{background:rgba(224,110,90,.12);border:1px solid rgba(224,110,90,.4);color:#e88b7a}
+
+/* spinner */
+.spinner{width:18px;height:18px;border:2.5px solid rgba(26,18,12,.35);border-top-color:#1a120c;border-radius:50%;animation:spin .7s linear infinite;display:none}
+button#submitBtn.loading .spinner{display:inline-block}
+button#submitBtn.loading .label{opacity:.7}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--border);padding:44px 0 60px;margin-top:30px;text-align:center}
+footer .contact{
+  display:inline-flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;
+  font-size:15px;color:var(--text-dim);margin-bottom:14px;
+}
+footer .contact .who{font-weight:800;color:var(--text)}
+footer .contact .who small{font-weight:600;color:var(--orange-br);margin-right:6px}
+footer .contact a{font-weight:700;color:var(--orange-br)}
+footer .copy{color:var(--text-mut);font-size:13px}
+
+/* ---------- sticky mobile CTA ---------- */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(20,17,13,0),rgba(20,17,13,.92) 34%);
+  transform:translateY(120%);transition:transform .3s ease;
+  display:none;
+}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{width:100%}
+
+/* ---------- responsive ---------- */
+@media (max-width:760px){
+  .infobar{grid-template-columns:repeat(3,1fr);gap:9px}
+  .info-card{padding:16px 8px}
+  .aud-grid{grid-template-columns:1fr}
+  form#apply{grid-template-columns:1fr}
+  .hero{padding:82px 0 50px}
+  section.block{padding:50px 0}
+  .sticky-cta{display:block}
+  .hero-cta{position:relative}
+}
+@media (max-width:420px){
+  .infobar{grid-template-columns:repeat(3,1fr)}
+  .info-card .value{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal"><span class="dot"></span>차곡차곡 AI 시리즈 · 온라인 설명회 (60분)</span>
+    <p class="series reveal">A Practical AI Series for Real Business</p>
+    <h1 class="reveal">차곡차곡 <span class="accent">AI</span> 실전기</h1>
+    <div class="kr-title reveal">고객경험 개선을 위한 <b>6주 AI 실전 과정</b></div>
+    <p class="subtitle reveal">AI, 이제 ‘아는 것’을 넘어 ‘<b style="color:var(--orange-br)">내 사업에 써먹는 것</b>’으로</p>
+    <p class="tagline reveal">원리는 사람이 배우고, 실행은 AI로 빠르게 — 진짜 결과물을 만드는 6주.</p>
+    <p class="invite reveal">설문에 참여해 주신 200여 분과 차곡차곡 수강생 여러분을 무료 설명회에 초대합니다.</p>
+    <div class="hero-cta reveal">
+      <a href="#apply-section" class="btn btn-primary">무료 설명회 신청하기 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== INFO BAR ===================== -->
+<section class="wrap" style="padding-top:6px">
+  <div class="infobar">
+    <div class="info-card reveal"><div class="label">일시</div><div class="value">7월 28일 (화)</div><div class="sub">오후 8시</div></div>
+    <div class="info-card reveal"><div class="label">방식</div><div class="value">온라인</div><div class="sub">Zoom</div></div>
+    <div class="info-card reveal"><div class="label">소요</div><div class="value">약 60분</div><div class="sub">Q&amp;A 포함</div></div>
+  </div>
+</section>
+
+<!-- ===================== AUDIENCE ===================== -->
+<section class="block wrap" id="audience">
+  <div class="sec-head reveal">
+    <div class="kicker">Who is this for</div>
+    <h2>이런 분들께 추천합니다</h2>
+    <p class="lead">하나라도 해당된다면, 이 설명회가 도움이 됩니다.</p>
+  </div>
+  <div class="aud-grid">
+    <div class="aud-item reveal"><span class="check">✓</span><p>AI를 자주 쓰지만, ‘<span class="hl">내 일에 어떻게 써야 할지</span>’ 막막한 분</p></div>
+    <div class="aud-item reveal"><span class="check">✓</span><p>업무 자동화는 궁금하지만, <span class="hl">복잡한 자동화 툴은 부담스러운</span> 분</p></div>
+    <div class="aud-item reveal"><span class="check">✓</span><p>배운 AI를 ‘<span class="hl">실제 결과물</span>’로 만들어 바로 써먹고 싶은 분</p></div>
+    <div class="aud-item reveal"><span class="check">✓</span><p>고객을 더 깊이 이해해, <span class="hl">다시 찾고 추천하게</span> 만들고 싶은 분</p></div>
+    <div class="aud-item reveal"><span class="check">✓</span><p>광고비 없이 ‘<span class="hl">고객경험</span>’으로 차별화하고 싶은 분</p></div>
+    <div class="aud-item reveal"><span class="check">✓</span><p>신규 고객을 더 만들고 싶은데 <span class="hl">무엇부터 손대야 할지</span> 막막한 분</p></div>
+  </div>
+</section>
+
+<!-- ===================== AGENDA ===================== -->
+<section class="block wrap" id="agenda">
+  <div class="sec-head reveal">
+    <div class="kicker">Agenda · 60 min</div>
+    <h2>이런 궁금증, 이 설명회에서 풉니다</h2>
+    <p class="lead">막연한 소개가 아니라, 여러분이 진짜 궁금해할 7가지를 하나씩 풀어드립니다.</p>
+  </div>
+  <div class="agenda">
+    <div class="agenda-item reveal"><div class="num">1</div><div class="body"><h3>왜 지금 ‘AI 경쟁력’인가?</h3><p>AI를 일에 녹인 사업자와 아닌 사업자의 격차 — 왜 지금 시작해야 하는지</p></div></div>
+    <div class="agenda-item reveal"><div class="num">2</div><div class="body"><h3>설문으로 본 우리 200명</h3><p>대부분 이미 AI를 쓰지만, 정작 ‘내 사업 적용’에서 막히는 이유</p></div></div>
+    <div class="agenda-item reveal"><div class="num">3</div><div class="body"><h3>6주 커리큘럼 어떻게 구성되는가?</h3><p>고객이 알고·믿고·구매하고·다시 찾는 과정마다, AI로 만들 실전 결과물</p></div></div>
+    <div class="agenda-item reveal"><div class="num">4</div><div class="body"><h3>나에게 맞는 프로그램일까?</h3><p>업종·규모별 적합성 — 내 사업에 바로 쓸 수 있는지 확인</p></div></div>
+    <div class="agenda-item reveal"><div class="num">5</div><div class="body"><h3>내 AI 수준으로 따라갈 수 있을까?</h3><p>초급~중급 모두 대상. 버디·보충 영상·빈칸 템플릿으로 함께</p></div></div>
+    <div class="agenda-item reveal"><div class="num">6</div><div class="body"><h3>업무 자동화는 어디까지?</h3><p>복붙 반자동 루틴부터 부분 자동 파이프라인까지, 현실적인 수준 안내</p></div></div>
+    <div class="agenda-item reveal"><div class="num">7</div><div class="body"><h3>현장 Q&amp;A</h3><p>궁금한 점을 직접 질문하고 답을 듣는 시간</p></div></div>
+  </div>
+</section>
+
+<!-- ===================== DIFFERENCE ===================== -->
+<section class="block wrap" id="difference">
+  <div class="diff reveal">
+    <div class="tag">What makes it different</div>
+    <p class="big">‘AI 버튼 누르는 법’을 알려주는 수업이 아닙니다. <span class="u">고객이 다시 찾고, 매출로 이어지게</span> 만드는 <b style="color:var(--orange)">방법</b>을 배우고, 그걸 AI로 빠르게 실행합니다.</p>
+    <div class="punch">원리는 <b>사람</b>이 배우고, 실행은 <b>AI</b>로 빠르게.</div>
+  </div>
+</section>
+
+<!-- ===================== CTA + FORM ===================== -->
+<section class="cta-section wrap" id="apply-section">
+  <div class="cta-card reveal">
+    <div class="head">
+      <span class="eyebrow"><span class="dot"></span>선착순 사전 신청 · 참가비 무료</span>
+      <h2>지금 <span class="accent">신청하세요</span></h2>
+      <p>아래 정보를 남겨 주시면, 신청 확인 후 Zoom 링크를 안내해 드립니다.</p>
+    </div>
+
+    <form id="apply" novalidate>
+      <!-- honeypot -->
+      <div class="hp" aria-hidden="true"><label>이 칸은 비워두세요<input type="text" name="botcheck" tabindex="-1" autocomplete="off" /></label></div>
+
+      <div class="field">
+        <label for="name">이름<span class="req">*</span></label>
+        <input id="name" name="이름" type="text" placeholder="홍길동" required />
+      </div>
+      <div class="field">
+        <label for="phone">연락처<span class="req">*</span></label>
+        <input id="phone" name="연락처" type="tel" inputmode="tel" placeholder="010-1234-5678" required />
+      </div>
+      <div class="field">
+        <label for="email">이메일<span class="req">*</span></label>
+        <input id="email" name="이메일" type="email" placeholder="you@example.com" required />
+      </div>
+      <div class="field">
+        <label for="industry">업종 / 사업 분야</label>
+        <input id="industry" name="업종" type="text" placeholder="예: 프리랜서, 제조/공방, 유통 등" />
+      </div>
+      <div class="field">
+        <label for="level">현재 AI 활용 수준</label>
+        <select id="level" name="AI수준">
+          <option value="">선택해 주세요</option>
+          <option value="입문 (거의 안 써봄)">입문 — 거의 안 써봤어요</option>
+          <option value="초급 (가끔 사용)">초급 — 가끔 써봤어요</option>
+          <option value="중급 (자주 사용)">중급 — 자주 쓰는 편이에요</option>
+          <option value="고급 (업무에 적용 중)">고급 — 업무에 적용 중이에요</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="channel">어떻게 알게 되셨나요?</label>
+        <select id="channel" name="유입경로">
+          <option value="">선택해 주세요</option>
+          <option value="설문 참여자">설문에 참여했어요</option>
+          <option value="차곡차곡 수강생">차곡차곡 수강생이에요</option>
+          <option value="지인 추천">지인 추천</option>
+          <option value="SNS / 커뮤니티">SNS · 커뮤니티</option>
+          <option value="기타">기타</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="question">설명회에서 특히 궁금한 점 (선택)</label>
+        <textarea id="question" name="궁금한점" placeholder="미리 남겨 주시면 현장 Q&A에서 우선 다뤄드립니다."></textarea>
+      </div>
+
+      <div class="consent">
+        <input id="consent" type="checkbox" required />
+        <label for="consent">설명회 신청 및 안내 목적의 <a href="#" onclick="return false" title="수집 항목: 이름·연락처·이메일 및 입력 정보 / 목적: 설명회 신청 확인·Zoom 링크 안내 / 보유: 설명회 종료 후 파기">개인정보 수집·이용</a>에 동의합니다. <span class="req">*</span></label>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" id="submitBtn" class="btn btn-primary">
+          <span class="spinner"></span>
+          <span class="label">무료 설명회 신청 완료하기</span>
+        </button>
+      </div>
+
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      <p class="form-note">신청 내용은 담당자 이메일로 안전하게 전달됩니다. · 문의 010-5502-7553</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="contact">
+      <span class="who"><small>신청·문의</small>위대한 경영자 허소미</span>
+      <a href="tel:010-5502-7553">010-5502-7553</a>
+    </div>
+    <p class="copy">차곡차곡 AI 시리즈 · 차곡차곡 AI 실전기 — 고객경험 개선을 위한 6주 AI 실전 과정</p>
+  </div>
+</footer>
+
+<!-- ===================== STICKY MOBILE CTA ===================== -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#apply-section" class="btn btn-primary">무료 설명회 신청하기 <span class="arrow">→</span></a>
+</div>
+
+<script>
+/* ============================================================
+   ⚙️  Web3Forms 설정 — 반드시 본인 키로 교체하세요.
+   1) https://web3forms.com 접속
+   2) 수신 이메일에  yhur0216@gmail.com  입력 → "Create Access Key"
+   3) 발급된 키를 아래 WEB3FORMS_ACCESS_KEY 에 붙여넣기
+   (키를 교체하기 전에는 제출 시 안내 메시지가 표시됩니다.)
+   ============================================================ */
+const WEB3FORMS_ACCESS_KEY = "cb3418a9-0055-4af8-914c-f87d3a333bd3";
+
+/* ---------- scroll reveal ---------- */
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((en,i)=>{
+      if(en.isIntersecting){
+        const el = en.target;
+        setTimeout(()=>el.classList.add('in'), Math.min(i*40,160));
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(e=>io.observe(e));
+})();
+
+/* ---------- sticky mobile CTA visibility ---------- */
+(function(){
+  const sticky = document.getElementById('stickyCta');
+  const formSec = document.getElementById('apply-section');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      // hide sticky bar once form is on screen; show after scrolling past hero
+      if(en.target===formSec){
+        if(en.isIntersecting) sticky.classList.remove('show');
+      }
+    });
+  },{threshold:.15});
+  io.observe(formSec);
+  window.addEventListener('scroll',()=>{
+    const scrolled = window.scrollY > window.innerHeight*0.6;
+    const formVisible = formSec.getBoundingClientRect().top < window.innerHeight;
+    if(scrolled && !formVisible) sticky.classList.add('show');
+    else if(!scrolled) sticky.classList.remove('show');
+  },{passive:true});
+})();
+
+/* ---------- form submit ---------- */
+(function(){
+  const form = document.getElementById('apply');
+  const btn = document.getElementById('submitBtn');
+  const statusEl = document.getElementById('formStatus');
+
+  function setStatus(type,msg){
+    statusEl.className = 'form-status show '+type;
+    statusEl.innerHTML = msg;
+    statusEl.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+
+    // honeypot
+    if(form.botcheck && form.botcheck.value){ return; }
+
+    // native validation
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+
+    // key not configured
+    if(WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY){
+      setStatus('err','⚠️ 폼 전송 키가 아직 설정되지 않았습니다.<br>web3forms.com에서 <b>yhur0216@gmail.com</b>으로 무료 키를 발급받아 코드의 <code>WEB3FORMS_ACCESS_KEY</code>를 교체해 주세요.');
+      return;
+    }
+
+    btn.classList.add('loading');
+    btn.disabled = true;
+    statusEl.className = 'form-status';
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `[설명회 신청] 차곡차곡 AI 실전기 — ${data['이름']||''}`,
+      from_name: "차곡차곡 AI 실전기 신청폼",
+      ...data
+    };
+    delete payload.botcheck;
+
+    try{
+      const res = await fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json', Accept:'application/json'},
+        body: JSON.stringify(payload)
+      });
+      const out = await res.json();
+      if(out.success){
+        form.reset();
+        setStatus('ok','✅ 신청이 접수되었습니다! 확인 후 <b>Zoom 링크</b>를 안내해 드리겠습니다. 감사합니다.');
+        btn.querySelector('.label').textContent = '신청이 완료되었습니다';
+      }else{
+        throw new Error(out.message||'전송 실패');
+      }
+    }catch(err){
+      setStatus('err','❌ 전송 중 문제가 발생했습니다. 잠시 후 다시 시도하시거나 <b>010-5502-7553</b>으로 연락해 주세요.');
+      btn.disabled = false;
+    }finally{
+      btn.classList.remove('loading');
+    }
+  });
+})();
+</script>
+</body>
+</html>
