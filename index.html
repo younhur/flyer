@@ -460,7 +460,7 @@ footer .copy{color:var(--text-mut);font-size:13px}
         <label for="industry">업종 / 사업 분야</label>
         <input id="industry" name="업종" type="text" placeholder="예: 프리랜서, 제조/공방, 유통 등" />
       </div>
-      <div class="field">
+      <div class="field full">
         <label for="level">현재 AI 활용 수준</label>
         <select id="level" name="AI수준">
           <option value="">선택해 주세요</option>
@@ -468,17 +468,6 @@ footer .copy{color:var(--text-mut);font-size:13px}
           <option value="초급 (가끔 사용)">초급 — 가끔 써봤어요</option>
           <option value="중급 (자주 사용)">중급 — 자주 쓰는 편이에요</option>
           <option value="고급 (업무에 적용 중)">고급 — 업무에 적용 중이에요</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="channel">어떻게 알게 되셨나요?</label>
-        <select id="channel" name="유입경로">
-          <option value="">선택해 주세요</option>
-          <option value="설문 참여자">설문에 참여했어요</option>
-          <option value="차곡차곡 수강생">차곡차곡 수강생이에요</option>
-          <option value="지인 추천">지인 추천</option>
-          <option value="SNS / 커뮤니티">SNS · 커뮤니티</option>
-          <option value="기타">기타</option>
         </select>
       </div>
       <div class="field full">
@@ -529,6 +518,13 @@ footer .copy{color:var(--text-mut);font-size:13px}
    (키를 교체하기 전에는 제출 시 안내 메시지가 표시됩니다.)
    ============================================================ */
 const WEB3FORMS_ACCESS_KEY = "cb3418a9-0055-4af8-914c-f87d3a333bd3";
+
+/* ─ Google Sheets 자동 기록 (선택) ─
+   구글 시트에 연결한 Apps Script 웹앱 URL을 아래에 넣으면,
+   신청이 들어올 때마다 시트에 한 줄씩 자동으로 기록됩니다.
+   (비워두면 Gmail 수신만 동작하고 시트 기록은 건너뜁니다.)
+   예:  https://script.google.com/macros/s/AKfy........./exec  */
+const GOOGLE_SHEET_ENDPOINT = "";
 
 /* ---------- scroll reveal ---------- */
 (function(){
@@ -602,6 +598,18 @@ const WEB3FORMS_ACCESS_KEY = "cb3418a9-0055-4af8-914c-f87d3a333bd3";
     statusEl.className = 'form-status';
 
     const data = Object.fromEntries(new FormData(form).entries());
+    delete data.botcheck;
+
+    // Google Sheets 기록 (있으면 병행 — 실패해도 신청 자체엔 영향 없음)
+    if (GOOGLE_SHEET_ENDPOINT) {
+      fetch(GOOGLE_SHEET_ENDPOINT, {
+        method:'POST',
+        mode:'no-cors',
+        headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body: JSON.stringify(data)
+      }).catch(()=>{});
+    }
+
     const payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: `[설명회 신청] 차곡차곡 AI 실전기 — ${data['이름']||''}`,
